@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- own css file link -->
+    <link rel="stylesheet" href="style.css">
+    <title>FACEBOOK POSTBOX CLONE</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="post">
+            <header>Create Post</header>
+            <form action="#">
+                <div class="details">
+                    <div class="logo">
+                            CI
+                    </div>
+                    <div class="content">
+                        <p>CodingIndia</p>
+                        <div class="icons post-visibility">
+                            <i class="fa-solid fa-users icon"></i>
+                            <p>Friends</p>
+                            <i class="fa-sharp fa-solid fa-caret-down icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <textarea placeholder="What's on your mind. CodingIndia?"></textarea>
+                <div class="color">
+                    <p class="character">
+                        Aa
+                    </p>
+                    <div class="emoji">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>Add Your Post</p>
+                    <div class="icons">
+                        <img src="images/gallery.png" alt="">
+                        <img src="images/user.png" alt="">
+                        <img src="images/emoji.png" alt="">
+                        <img src="images/edit.png" alt="">
+                        <img src="images/threeDot.png" class="dot" alt="">
+                    </div>
+                </div>
+                <button class="post-btn disabled" disabled type="submit">
+                    Post
+                </button>
+    </form>
+        </div>
+        <div class="userPreference">
+            
+            <header>
+                <span class="icon back-arrow">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </span>
+                <span class="header-heading">Select Audience</span>
+            </header>
+
+            <div class="body">
+                <div class="heading">
+                    <h1>Who can see your post</h1>
+                    <p>
+                        Your post will show up in News Feed, on your profile and in search results.
+                    </p>
+                </div>
+                <div class="options">
+
+                    <div class="option" >
+                        <label class="left" for="public">
+                            <span class="icon">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </span>
+                            <span class="contents">
+                                <h1>Public</h1>
+                                <p>
+                                    Anyone on or off Facebook
+                                </p>
+                            </span>
+                        </label>
+                        <div class="right">
+                            <input type="radio" name="option" id="public">
+                        </div>
+                    </div>
+
+                    <div class="option" >
+                        <label class="left" for="friends">
+                            <span class="icon">
+                                <i class="fa-solid fa-user-group"></i>
+                            </span>
+                            <span class="contents">
+                                <h1>Friends</h1>
+                                <p>
+                                    Your friends on facebook
+                                </p>
+                            </span>
+                        </label>
+                        <div class="right">
+                            <input type="radio" name="option" id="friends">
+                        </div>
+                    </div>
+
+                    <div class="option" >
+                        <label class="left" for="specific">
+                            <span class="icon">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <span class="contents">
+                                <h1>Specific</h1>
+                                <p>
+                                    Only show to some friends
+                                </p>
+                            </span>
+                        </label>
+                        <div class="right">
+                            <input type="radio" name="option" id="specific">
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <label class="left"  for="me">
+                            <span class="icon">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <span class="contents">
+                                <h1>Only me</h1>
+                                <p>
+                                    Only you can see your post
+                                </p>
+                            </span>
+                        </label>
+                        <div class="right">
+                            <input type="radio" name="option" id="me">
+                        </div>
+                    </div>
+                    
+                    <div class="option" >
+                        <label class="left" for="custom">
+                            <span class="icon">
+                                <i class="fa-solid fa-gear"></i>
+                            </span>
+                            <span class="contents">
+                                <h1>Custom</h1>
+                                <p>
+                                    Include and include exclude friends
+                                </p>
+                            </span>
+                        </label>
+                        <div class="right">
+                            <input type="radio" name="option" id="custom">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

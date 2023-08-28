@@ -1,0 +1,18 @@
+.home .content .about h1{
+    font-size:3rem;
+    font-weight:600;
+    text-transform:uppercase;
+}
+.divide{
+    height:2px;
+    background:#ccc;
+    margin:10px 0;
+}
+.home .content .about p{
+    font-size:1.6rem;
+    font-weight:500;
+    margin-bottom:20px;
+}
+.home .content .about .paragraphs{
+    margin-top:30px;
+}

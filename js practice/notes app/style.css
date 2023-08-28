@@ -1,0 +1,287 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap');
+
+/* main design starts here */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'poppins' , sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:rgb(104, 195, 231);
+}
+body .first-heading{
+    margin-top:0;
+}
+/* navbar design starts here */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:black;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    padding-inline:50px;
+}
+.navbar .logo{
+    color:white;
+    font-size:25px;
+    font-weight:500;
+}
+.navbar .search input{
+    width:250px;
+    height:40px;
+    border-radius:3px;
+    outline:none;
+    padding-inline:10px;
+    font-size:15px;
+    font-weight:400;
+    border:2px solid rgb(104 , 195 , 231);
+}
+.navbar .search button{
+    height:40px;
+    width:fit-content;
+    font-weight:400;
+    border-radius:3px;
+    padding-inline:10px;
+    cursor:pointer;
+    background:rgb(104, 195, 231);
+    margin-left:5px;
+    font-size:15px;
+}
+.navbar .search  button:hover{
+    background:rgb(42, 128, 161);
+    color:black;
+}
+/* notes design starts here */
+.heading{
+    padding:10px;
+    text-align:center;
+    font-size:25px;
+    font-weight:600;
+    color:white;
+    background:black;
+}
+.sub-heading{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:15px;
+    text-align:center;
+}
+.container{
+    padding:25px 5px 25px 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:60px;
+}
+.container .notes-container{
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:3px;
+    border:2px solid rgb(104, 195, 231);
+    width:500px;
+    background:black;
+    color:white;
+    margin-bottom:10px;
+}
+.container .notes-container label{
+    font-size:16px;
+    font-weight:400;
+    margin-bottom:5px;
+    display:block;
+}
+.container .notes-container input , textarea{
+    height:40px;
+    padding-inline:7px;
+    border:2px solid rgb(104, 195, 231);
+    outline:none;
+    border-radius:3px;
+    margin-bottom:10px;
+    width:100%;
+    font-size:15px;
+    background:#f9f9f9;
+}
+.container .notes-container textarea{
+    height:130px;
+    resize:none;
+    overflow:hidden;
+}
+button{
+    width:130px;
+    border:none;
+    height:40px;
+    border-radius:3px;
+    color:black;
+    font-weight:500;
+    font-size:16px;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+.container .notes-container .save{
+    background:rgb(104, 195, 231);
+}
+.container .notes-container .save:hover{
+    background:rgb(42, 128, 161);
+    color:black ;
+}
+.container .notes-container .reset{
+    background:rgb(104, 195, 231);
+    color:black;
+}
+.container .notes-container .reset:hover{
+    background:rgb(42, 128, 161);
+    color:black;
+}
+.container .notes-container .error{
+    font-size:14px;
+    color:rgb(104, 195, 231);
+    font-weight:400;
+    margin-bottom:5px;
+    padding-left:10px;
+    display:none;
+}
+/* saved cards design starts here */
+.NO-DATA , .no-search{
+    border:2px  solid rgb(104, 195, 231);
+    padding:20px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    font-size:18px;
+    font-weight:500;
+    background:black;
+    color:white;
+    width:fit-content;
+    margin-inline:auto;
+    margin-top:20px;
+    display:none;
+}
+
+.saved .cards{
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.saved .cards .card{
+    border:2px solid rgb(104, 195, 231);
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    min-width:300px;
+    max-width:500px;
+    border-radius:3px;
+    padding:15px;
+    color:white;
+    background:black;
+}
+.saved .cards .card .title h1{
+    font-size:18px;
+    font-weight:600;
+    text-align:center;
+    margin:10px 0;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+/* .saved .cards .card .title h1:after{
+    content:' :';
+} */
+.saved .cards .card .text{
+    font-size:15px;
+    font-weight:400;
+    text-align:justify;
+    text-align-last: center;
+    margin-bottom:20px;
+}
+.saved .cards .card .update{
+    text-align:center;
+}
+.saved .cards .card .update .update-btn{
+    background:orange;
+}
+.saved .cards .card .update .update-btn:hover{
+    background:rgb(204, 134, 4);
+}
+.saved .cards .card .update .delete-btn{
+    background:red;
+}
+.saved .cards .card .update .delete-btn:hover{
+    background:rgb(189, 3, 3);
+}
+/* responsive design starts here */
+@media screen and (max-width:500px){
+    button{
+        width:100px;
+        font-size:15px;
+    }
+    .heading{
+        font-size:23px;
+    }
+    .sub-heading{
+        font-size:20px;
+    }
+    .NO-DATA , .no-search{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:700px){
+    .navbar{
+        padding-inline:20px;   
+    }
+    .navbar .logo{
+        font-size:23px;
+    }
+    .navbar .search{
+        position:fixed;
+        top:70px;
+        right:20px;
+        background:white;
+        padding:10px;
+        border-radius:5px;
+        width:fit-content;
+        display:none;
+    }
+    .navbar.active .search{
+        display:block;
+    }
+    .navbar .search-icon{
+        cursor:pointer;
+        padding:5px 10px;
+        border-radius:3px;
+        color:black;
+        background:rgb(140, 195 , 231);
+        transition:all 0.3s ease;
+    }
+    .navbar .search-icon:hover{
+        background:rgb(42, 128, 161);
+    }
+}
+
+/* footer design starts here */
+footer{
+    background:black;
+    color:white;
+    font-size:16px;
+    font-weight:400;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    text-align:center;
+}
+footer a{
+    color:rgb(104, 195, 231);
+    cursor:pointer;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}

@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+/* home design starts here */
+
+.home{
+    position:absolute;
+    height:92.4vh;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+.home .start{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    background: linear-gradient( blueviolet 80% , rgb(130, 4, 248));
+}
+
+.home .start .input{
+    display:flex;
+    flex-direction:column;
+    row-gap:15px;
+    margin-bottom:20px;
+    width:100%;
+}
+
+.home .start .input input{
+    width:400px;
+    border-radius:5px;
+    border:2px solid grey;
+    height:40px;
+    padding-inline:10px;
+    box-sizing:border-box;
+    font-size:16px;
+    outline:none;
+}
+
+.home .start .input .player{
+    font-size:25px;
+    width:100%;
+    padding-inline:10px;
+    box-sizing:border-box;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    column-gap:10px;
+}
+
+.home .start .input .player1{
+    color:black;
+}
+
+.home .start .input .player2{
+    color:red;
+}
+
+.home .start button{
+    width:170px;
+    font-size:20px;
+    cursor:pointer;
+    color:white;
+    background:#080808;
+    height:50px;
+    border-radius:3px;
+    border:none;
+    font-weight:500;
+    transition:all 0.3s ease;
+}
+.home .start button:hover{
+    background:#1b1b1b;
+}
+/* game design starts here */
+.wrapper{
+    background:linear-gradient( blueviolet 80% , rgb(130, 4, 248));
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .boxes{
+    display:grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows:repeat(3, 100px);
+    gap:20px;
+}
+.wrapper .boxes .box{
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:auto;
+    border-radius:5px;
+    font-size:60px;
+    font-weight:500;
+    color:black;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+.wrapper .container .button{
+    text-align:center;
+    margin-top:25px;
+}
+.wrapper .container .button button{
+    width:150px;
+    height:45px;
+    font-size:16px;
+    border-radius:3px;
+    border:none;
+    cursor:pointer;
+    background:#1b1b1b;
+    color:white;
+    transition:all 0.3s ease;
+}
+.wrapper .container .button button:hover{
+    background:#0e0d0d;
+}
+.wrapper .container .turn-container{
+    text-align:center;
+    font-size:25px;
+    font-weight:500;
+    color:white;
+    text-transform:capitalize;
+    margin-bottom:25px;
+}
+.wrapper .container .turn-container .turn{
+    color:black;
+    font-weight:600;
+    text-transform: uppercase;
+}
+/* popup design starts here */
+.pop-up{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background:linear-gradient( blueviolet 80% , rgb(130, 4, 248));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+.pop-up img{
+    width:250px;
+}
+.pop-up .title{
+    font-size:50px;
+    color:white;
+    font-weight:600;
+    margin-bottom:25px;
+}
+.pop-up .new-btn{
+    background:#1b1b1b;
+    color:white;
+    width:200px;
+    height:55px;
+    cursor:pointer;
+    font-size:25px;
+    font-weight:500;
+    border:none;
+    border-radius:5px;
+}
+.pop-up .new-btn:hover{
+    background:#080808;
+}
+.pop-up.hide{
+    display:none;
+}
+
+/* footer design starts here */
+footer{
+    background:#1b1b1b;
+    min-height:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size:18px;
+    text-align:center;
+    padding:10px;
+}
+footer a{
+    text-decoration:none;
+    color:blueviolet;
+    transition:all 0.3s ease;
+    margin-left:8px;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+/* responsive design starts here */
+@media screen and (max-width:450px){
+    .wrapper .container .boxes {
+        grid-template-columns: repeat(3 , 80px);
+        grid-template-rows: repeat(3 , 80px);
+    }
+    .wrapper  .container .boxes .box{
+        font-size:45px;
+    }
+    .pop-up img{
+        width:200px;
+    }
+    .pop-up .title{
+        font-size:40px;
+    }
+    .home .start .input{
+
+    }
+    .home .start .input .player{
+        width:100%;
+    }
+}
+@media screen and (max-width:500px){
+    footer{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:300px){
+    .wrapper .container{
+        width:100%;
+        padding-inline:5px;
+    }
+    .wrapper .container .boxes{
+        width:100%;
+        gap:10px;
+        grid-template-columns: repeat(3 , auto);
+    }
+}

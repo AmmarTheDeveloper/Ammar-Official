@@ -1,0 +1,120 @@
+.home .content .form{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+.home .content .form form{
+    flex-basis:100rem;
+    max-width:100%;
+}
+.home .content .form h1{
+    font-size:3rem;
+    font-weight:600;
+    text-transform:uppercase;
+    margin-bottom:30px;
+    text-align:center;
+}
+.home .content .form form{
+    border:2px solid var(--mainColor);
+    border-radius:5px;
+    padding:20px;
+}
+.home .content .form form .row{
+    display:grid;
+    grid-template-columns:repeat(2 , 1fr);
+    grid-template-rows:repeat(2 , auto);
+    column-gap:15px;
+    margin-bottom:15px;
+}
+.home .content .form form .row .input{
+    display:flex;
+    margin-bottom:15px;
+}
+.home .content .form form label{
+    width:18rem;
+    display:inline-block;
+    margin-right:10px;
+}
+.home .content  .form form .row input{
+    flex:1;
+    flex-shrink:1;
+}
+.home .content .form form :where(label , input){
+    height:4rem;
+    font-size:1.6rem;
+    font-weight:500;
+}
+.home .content .form form input{
+    box-sizing:border-box;
+    padding-inline:5px;
+    outline:none;
+    border:2px solid var(--mainColor);
+    border-radius:3px;
+    width:100%;
+}
+.home .content  .form form .message{
+    display:flex;
+    margin-bottom:15px;
+}
+.home .content .form form .message textarea{
+    box-sizing:border-box;
+    padding:5px;
+    outline:none;
+    border:2px solid var(--mainColor);
+    border-radius:3px;
+    flex:1;
+    font-size:1.6rem;
+    font-weight:500;
+    overflow:auto;
+    resize:none;
+    height:150px;
+}
+.home  .content .form form input:focus , .home .content .form form textarea:focus{
+    box-shadow:0 0 10px 1px var(--mainColor);
+}
+.home .content .form form input#phone{
+    position:relative;
+}
+.home .content .form form .submit-container{
+    text-align:right;
+}
+.home .content .form form .submit-container .submit{
+    width:200px;
+    padding:5px 10px;
+    border:2px solid var(--mainColor);
+    background:var(--mainColor);
+    color:white;
+    cursor:pointer;
+    font-weight:400;
+    transition:all 0.3s ease;
+}
+.home  .content .form form .submit:hover{
+    background:transparent;
+    color:var(--mainColor);
+}
+.home .content .form form .error{
+    font-size:1.3rem;
+    color:var(--crimson);
+    margin-bottom:5px;
+    display:inline-block;
+}
+@media screen and (max-width:992px){
+    .home .content .form form .row{
+        display:block;
+    }
+}
+@media screen and (max-width:500px){
+    .home .content .form form :where(.row .input , .message){
+        flex-direction:column;
+        width:100%;
+    }
+    .home .content .form form .row .input input , .home .content .form form .message textarea{
+        flex:unset;
+    }
+    .home .content .form form .submit-container .submit{
+        width:100%;
+    }
+    .home .content .form form label{
+        width:initial;    
+    }
+}

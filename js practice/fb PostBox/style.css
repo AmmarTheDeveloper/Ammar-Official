@@ -1,0 +1,244 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins' , sans-serif;
+    box-sizing:border-box;
+}
+.container{
+    min-height:100vh;
+    width:100%;
+    background:rgb(68, 68, 216);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width:450px;
+    height:fit-content;
+    display:flex;
+    align-items:start;
+    overflow:hidden;
+}
+.post{
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    border-radius:3px;
+    flex-shrink:1;
+    margin-inline:5px;
+    margin-left:-450px;
+    margin-left:0;
+    flex-shrink:0;
+    width:100%;
+    transition:all 0.1s ease;
+}
+.post header{
+    padding:8px 20px;
+    font-size:18px;
+    text-align:center;
+    border-bottom:2px solid rgba(0,0,0,0.3);
+    font-weight:600;
+}
+.post form{
+    padding:5px 20px 10px 20px;
+}
+.container .post  form .details{
+    padding:10px 0;
+    display:flex;
+    justify-content:start;
+    column-gap:15px;
+}
+.container .post form .details .logo{
+    background:rgb(68, 68, 216);
+    border-radius:50%;
+    font-size:20px;
+    width:50px;
+    height:50px;
+    color:white;
+    font-weight:600;
+    text-transform:uppercase;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+}
+.container .post form .details .content p{
+    font-size:15px;
+    font-weight:600;
+}
+.container .post form .details .content .icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f0f0f0;
+    padding:2px;
+    border-radius:3px;
+    column-gap:2px;
+    cursor:pointer;
+    color:black;
+    transition:all 0.3s ease;
+}
+.container .post form .details  .content .icons:hover{
+    background:#dbdbdb;
+}
+.container .post form .details .content .icons .icon , .container .post form .details .content .icons p{
+    font-size:14px;
+}
+.container .post form .details .content .icons p{
+    font-weight:500;
+}
+.container .post form textarea{
+    height:100px;
+    font-size:15px;
+    font-weight:500;
+    width:100%;
+    border:none;
+    margin-top:15px;
+    outline:none;
+    resize:none;
+    overflow:hidden;
+}
+.container .post form .color{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+.container .post form .color .character{
+    background:linear-gradient(-30deg , red , orange , blue);
+    color:white;
+    font-weight:500;
+    padding:2px 3px;
+    border-radius:5px;
+}
+.container .post form .color .emoji{
+    font-size:20px;
+    color:grey;
+}
+.container .post form button{
+    width:100%;
+    height:40px;
+    font-size:16px;
+    font-weight:500;
+    border:none;
+    background:rgb(68, 68, 216);
+    cursor:pointer;
+    color:white;
+    border-radius:3px;
+    margin-top:10px;
+}
+.container .post form .disabled{
+    cursor:not-allowed;
+    background:grey;
+    transition:all 0.3s ease;
+}
+.container .post form .disabled:hover{
+    background:rgba(0,0,0,0.6);
+}
+.container .post form button:hover{
+    background:rgb(42, 42, 241);
+}
+.container .post form  .footer{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    border:2px solid rgba(0,0,0,0.25);
+    border-radius:5px;
+    padding:5px 10px;
+}
+.container .post form .footer .icons{
+    display:inline-flex;
+    align-items:center;
+    column-gap:5px;
+}
+.container .post form .footer p{
+    font-size:15px;
+    font-weight:500;
+    color:rgba(0,0,0,0.8);
+}
+.container .post form .footer .icons img{
+    width:30px;
+}
+.container .post form .footer .icons img.dot{
+    width:40px;
+}
+.container .post.hide{
+    display:none;
+}
+/* user preference design start here  */
+.userPreference{
+    background:white;
+    border-radius:3px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    width:100%;
+    flex-shrink:0;
+    transition:all 0.1s ease;
+}
+.userPreference header{
+    display:flex;
+    padding:10px 20px;
+    border-bottom:2px solid rgba(0,0,0,0.3);
+}
+.userPreference .icon{
+    background:#f0f0f0;
+    border-radius:50%;
+    padding:5px 9px;
+    cursor:pointer;
+    font-size:16px;
+    transition:all 0.3s ease;
+    color:rgba(0,0,0,0.8);
+}
+.userPreference header .icon:hover{
+    background:#c0c0c0;
+}
+.userPreference header  .header-heading{
+    margin:auto;
+    font-size:20px;
+    font-weight:600;
+}
+.userPreference .body{
+    padding:20px;
+}
+.userPreference .body .heading h1{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:5px;
+}
+.userPreference .body .heading p{
+    font-size:14px;
+    font-weight:400;
+}
+.userPreference .body .options{
+    margin-top:20px;
+}
+.userPreference .body .option{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-radius:5px;
+    padding: 8px;
+    cursor:pointer;
+}
+.userPreference .body .option .left{
+    cursor:inherit;
+}
+.userPreference .body .option:hover{
+    background:rgba(0,0,255,0.2);
+}
+.userPreference .body .option  .left{
+    display:flex;
+    align-items:center;
+    justify-content:start;
+    column-gap:10px;
+    width:100%;
+}
+.userPreference .body .option  .left .contents h1{
+    font-size:16px;
+    font-weight:600;
+}
+.userPreference .body .option .left .contents p{
+    font-size:14px;
+    font-weight:400;
+}
+.userPreference .body .option .left .icon{
+    font-size:20px;
+    padding:7px 11px;
+}

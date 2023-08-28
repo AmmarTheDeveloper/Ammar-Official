@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,500;1,600;1,700;1,800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    min-height:93.2vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .box{
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    border-radius:5px;
+    padding:20px;
+    width:450px;
+    text-align:center;
+}
+.container .box h2{
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+    margin-bottom:15px;
+}
+
+.container .box input{
+    width:100%;
+    height:40px;
+    border-radius:3px;
+    border:1px solid  grey;
+    outline:none;
+    padding-inline:10px;
+    font-size:15px;
+    font-weight:400;
+}
+
+
+.container .box button{
+    width:100%;
+    cursor:pointer;
+    background:blue;
+    color:white;
+    height:40px;
+    border:2px solid blue;
+    font-size:15px;
+    font-weight:500;
+    border-radius:3px;
+    transition:all 0.3s ease;
+}
+.container .box button:hover{
+    background:darkblue;
+    border-color:darkblue;
+}
+.container .box .img.active{
+    margin:15px 0;
+}
+.container .box .img.active img{
+    border:1px solid grey;
+    padding:5px;
+    border-radius:3px;
+}
+@media screen and (max-width:500px){
+    .container .box{
+        width:100%;
+        margin-inline:10px;
+    }
+}
+footer{
+    background:#1b1b1b;
+    padding:10px;
+    text-align:center;
+    color:white;
+}
+footer a{
+    text-decoration:none;
+    color:blue;
+}
+footer a:hover{
+    text-decoration:underline;
+}

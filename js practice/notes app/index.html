@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes app using js</title>
+    <!-- fontawesome  cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <!-- own css file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            MAGIC NOTE'S
+        </div>
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="search">
+            <input type="search" class="search-input" placeholder="Search your notes">
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+    <div class="container">
+        <form class="notes-container">
+            <h1 class="sub-heading">ADD YOUR NOTE'S HERE</h1>
+            <div class="title">
+                <label for="title">Enter title of your notes:</label>
+                <input type="text" placeholder="Enter Your Notes Title" id="title">
+            </div>
+            <div class="note">
+                <label for="note">Enter your notes:</label>
+                <textarea name="" id="note" placeholder="Type Your Notes Here"></textarea>
+            </div>
+            <div class="error">
+                Please fill all fields correctly
+            </div>
+            <div class="add">
+                <button class="save" type="button">Save note</button>
+                <button class='reset' type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <div class="saved">
+        <h1 class="heading">SAVED NOTE'S</h1>
+        <div class="NO-DATA">
+            YOU DON'T SAVED ANY NOTE'S
+        </div>
+        <div class="no-search">
+            <span></span> IS NOT FOUND
+        </div>
+        <div class="cards">
+            
+            <!-- <div class="card">
+                <div class="title">
+                    <h1>javascript note's</h1>
+                </div>
+                <div class="text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatum nihil eaque id architecto deserunt dolore ut minima at a.</p>
+                </div>
+                <div class="update">
+                    <button class="update-btn">Update</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+    <footer>
+        <p>
+            Created and developed by <a href="tel:+919892564710">AMMAR DEVELOPER </a> || &copy; copyright 2023
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
