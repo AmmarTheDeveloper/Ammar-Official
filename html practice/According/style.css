@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 0;
+}
+.container{
+    width:95%;
+    height:auto;
+    box-shadow:0 4px 10px rgba(0,0,0,0.5);
+    border-radius:5px;
+    box-sizing:border-box;
+    padding:5px 10px;
+}
+.container .accordin{
+    background:rgb(216, 216, 253);
+    margin:10px 0;
+    box-sizing:border-box;
+    width:100%;
+    padding:10px;
+    overflow:hidden;
+    border-radius:5px;
+}
+.container .accordin h1{
+    font-size:16px;
+    font-weight:500;
+    width:100%;
+    box-sizing:border-box;
+    padding-right:20px;
+    position:relative;
+    cursor:pointer;
+}
+.container .accordin .icon{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:rgb(145, 145, 252);
+    transition:all 0.3s ease;
+}
+.container .accordin .icon:hover{
+    color:rgb(255, 158, 177);
+}
+.container .accordin p{
+    max-height:0;
+    font-size:16px;
+    font-weight:400;
+    -webkit-transition:all 0.3s ease;
+    transition:all 0.3s ease-in-out;
+    overflow:hidden;
+}
+.container .accordin.active p{
+    max-height:1000px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <title>Tags</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family:"Poppins" , sans-serif;
+        }
+        body{
+            background:blue;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            width:100%;
+        }
+        .container{
+            padding:20px;
+            border-radius:5px;
+            background:white;
+            box-shadow:0 4px 5px 2px rgba(0,0,0,0.4);
+            width:400px;
+        }
+        .container  .heading{
+            font-size:20px;
+            font-weight:600;
+            margin-bottom:15px;
+        }
+        .container .input-container{
+            border:1px solid black;
+            display:flex;
+            border-radius:5px;
+            padding:5px 5px 1px 5px;
+            margin-bottom:15px;
+            flex-wrap:wrap;
+        }
+        .container .input-container ul{
+            width:100%;
+            display:flex;
+            justify-content:start;
+            align-items:center;
+            flex-wrap:wrap;
+            list-style:none;
+        }
+        .container .input-container .tags .tag{
+            margin:0 5px 5px 5px;
+            cursor:pointer;
+            background:rgb(224, 220, 220);
+            padding:3px 10px;
+            border-radius:5px;
+            height:30px;
+            user-select:none;
+            line-height:30px;
+        }
+        .container .input-container .tags .tag:hover{
+            background:#ccc;
+        }
+        .container .input-container .cancel{
+            background:#ccc;
+            padding:3px 6px 3px 5px;
+            border-radius:50%;
+            font-size:13px;
+            box-shadow: 0 0px 5px 1px rgba(0,0,0,0.2);
+        }
+        .container .input-container .cancel:hover{
+            background:rgb(161, 159, 159);
+        }
+        .container  .input-container .input{
+            height:30px;
+            flex:1 0 0;
+            border:none;
+            outline:none;
+            font-size:15px;
+        }
+        .container .text{
+            font-size:16px;
+            font-weight:500;
+            margin-bottom:15px;
+        }
+        .container .footer{
+            display:flex;
+            justify-content:space-between;
+            height:fit-content;
+            align-items:center;
+            font-size:16px;
+        }
+        .container .footer .btn{
+            background:blue;
+            height:35px;
+            width:100px;
+            border-radius:5px;
+            border:none;
+            color:white;
+            font-weight:500;
+            font-size:15px;
+            cursor:pointer;
+            transition:all 0.3s ease;
+        }
+        .container .footer .btn:hover{
+            background:rgb(8, 8, 143);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><i class="fa-solid fa-tag tag-icon"></i> Tags</div>
+        <div class="text">Press enter or add a comma after each tag</div>
+        <div class="input-container">
+            <ul class="tags">
+                <li class="tag">html <i class="fa-solid fa-xmark cancel"></i></li>
+                <li class="tag">css <i class="fa-solid fa-xmark cancel"></i></li>
+                <input type="text" class="input">
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="remaining-tags"><span class="remaining"></span> tags are remaining</div>
+            <button class="btn remove-all" type="button">Remove All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

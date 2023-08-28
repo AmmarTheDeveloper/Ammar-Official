@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp generator</title>
+    <style>
+        button{
+            background:#8a2be2;
+            border-radius:5px;
+            outline:none;
+            border:none;
+            color:white;
+            font-size:18px;
+            font-weight:500;
+            padding:12px 20px;
+            cursor:pointer;
+        }
+        .container{
+            text-align:center;
+            box-shadow:0 0 15px rgba(0,0,0,0.5);
+            border-radius:5px;
+            width:fit-content;
+            padding:10px 50px 20px 50px;
+        }
+        span{
+            color:#8a2be2;
+        }
+        body{
+            display:flex;
+            min-height:90vh;
+            justify-content:center;
+            align-items:center;
+        }
+        .container .input{
+            display:block;
+            margin-bottom:15px;
+            height:40px;
+            box-sizing:border-box;
+            padding-left:10px;
+            font-size:15px;
+            color:#8a2be2;
+            border:2px solid #8a2be2;
+            border-radius:3px;
+            outline:none;
+            display:none;
+        }
+        .container .input::placeholder{
+            color:#8a2be2;
+        }
+        .container .input.active{
+            display:block;
+        }
+        button.active{
+            display :none;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your OTP IS: <span></span></h2>
+        <input type="number" class="input" placeholder = "Enter OTP"/>
+        <button type="button" class="otp">Generate OTP</button>
+        <button type="button" class="active">Enter OTP</button>
+    </div>
+    <script>
+        const button = document.querySelector('button.otp'),
+              span = document.querySelector('span'),
+              digit = "0123456789",
+              input = document.querySelector('.input'),
+              Btn = document.querySelector('button.active');
+        button.addEventListener('click' , ()=>{
+              otp = '';
+            for(i=1; i<7; i++){
+                otp += digit[Math.floor(Math.random() * 10)];
+            }
+            span.innerText = otp;
+            input.classList.add('active');
+            button.innerText = "Enter OTP";
+            button.style.display = "none";
+            Btn.style.display = "block";
+        })
+        Btn.onclick = ()=>{
+            if(input.value != otp){
+                alert('Invalid otp');
+            }
+            else{
+                alert('otp matched');
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

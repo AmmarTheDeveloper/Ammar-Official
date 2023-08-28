@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family:Poppins , sans-serif;
+        }
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height:100vh;
+        }
+        .validation{
+            background:#f2f2f2;
+            border-radius:5px;
+            box-shadow:4px 4px 15px rgba(0,0,0,0.5);
+            display:grid;
+            grid-template-columns:repeat(1 ,100%);
+            grid-template-rows:repeat(2 , auto);
+            row-gap:30px;
+            justify-content:center;
+            align-content:center;
+            box-sizing:border-box;
+            padding:25px;
+            width:fit-content;
+            height:fit-content;
+        }
+        .validation .heading{
+            font-size:30px;
+            color:crimson;
+            text-align:center;
+            text-transform:uppercase;
+        }
+        .validation .inputs{
+            display:grid;
+            justify-content:center;
+            grid-template-columns:repeat(2 , 300px);
+            grid-gap:20px;
+        }
+        .validation .inputs  input{
+            border-radius:2px;
+            border:2px solid grey;
+            outline:none;
+            height:45px;
+            width:100%;
+            box-sizing:border-box;  
+            padding-left:20px;
+            font-size:15px;
+        }
+        .validation .button{
+            width:fit-content;
+            margin:30px auto 5px auto;
+        }
+        .validation .button button{
+            height:40px;
+            width:120px;
+            border-radius:5px;
+            border:2px solid crimson;
+            background:crimson;
+            color:white;
+            font-size:18px;
+            outline:none;
+            cursor:pointer;
+            transition:all 0.3s ease;
+        }
+        .validation .button button:hover{
+            background:transparent;
+            color:crimson;
+        }
+        .validation .inputs .error{
+            min-height:10px;
+            max-height:30px !important;
+            border:1px solid transparent;
+            width:fit-content;
+            color:crimson;
+            font-size:12px;
+            font-weight:500;
+            float:right;
+        }
+        .validation .message{
+            min-height:15px;
+            max-height:30px !important;
+            border:1px solid transparent;
+            width:fit-content;
+            color:crimson;
+            font-size:12px;
+            font-weight:500;
+        }
+        @media screen and (max-width:700px){
+            .validation{
+                width:500px;
+            }
+            .validation .heading{
+                font-size:27px;
+            }
+            .validation .inputs{
+                grid-template-columns:100%;
+                grid-template-rows:repeat(6 , auto);
+                row-gap:20px;
+                column-gap:0;
+            }
+            .validation input{
+                width:100% !important;
+            }
+        }
+        @media screen and (max-width:580px){
+            .validation{
+                width:90%;
+            }
+        }
+        @media screen and (max-width:400px){
+            .validation .heading{
+                font-size:25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="validation">
+        <div>
+            <h3 class="heading">Form Validation</h3>
+        </div>
+        <form class="form"  name="submit-to-google-sheet" method="post" onsubmit="return false;" autocomplete="on">
+            <div class="inputs">
+                <div>
+                    <input type="text" class="firstname" name="first name" autocomplete="on" autofill="on" placeholder="Enter your first name">
+                    <span class="error first-name-error"></span>
+                </div>
+            <div>
+                <input type="text" name="last name" class="lastname" placeholder="Enter your last name">
+                <span class="error last-name-error"></span>
+            </div>
+            <div>
+                <input type="text" name="password" class="password" placeholder="Enter your password">
+                <span class="error password-error"></span>
+            </div>
+            <div>
+                <input type="text" name="confirm password" class="confirmpassword" placeholder="Enter your confirm password">
+                <span class="error confirm-password-error"></span>
+            </div>
+           <div>
+            <input type="email" name="email" class="email" placeholder="Enter your  email">
+            <span class="error email-error"></span>
+           </div>
+            <div>
+                <input type="text" name="phone no" class="phone-no" placeholder="Enter your phone no">
+                <span class="error phone-error"></span>
+            </div>
+            </div>
+            <div class="button">
+                <button type="submit" class="submit" >Submit</button>
+                <div class="message"></div>
+            </div>
+        </form>
+    </div>
+    <script src="validation2.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Dark/Light mode</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Ammar</h1>
+        </div>
+        <ul class="nav">
+            <li class="list-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="list-item"><a href="#" class="nav-link">About</a></li>
+            <li class="list-item"><a href="#" class="nav-link">Skills</a></li>
+            <li class="list-item"><a href="#" class="nav-link">Services</a></li>
+            <li class="list-item"><a href="#" class="nav-link">Contacts</a></li>
+        </ul>
+        <div class="theme">
+            <span class="icon">
+                <i class="fa-solid fa-moon dark"></i>
+                 <!-- <i class="fa-solid fa-sun light theme"></i> -->
+            </span>
+                <span class="icon changer">
+                    <span class="painting">
+                        <i class="fa-solid fa-palette"></i>
+                    <i class="fa-solid fa-angle-down down"></i>
+                    </span>
+                    <div class="colors">
+                        <span class="text">Color switcher</span>
+                        <div class="color-container">
+                            <div class="color-1 color active" data-color="blue #0000ff1a"></div>
+                            <div class="color-2 color " data-color="orange #ffa5001a"></div>
+                            <div class="color-3 color" data-color="crimson #dc143c1a"></div>
+                            <div class="color-4 color" data-color="#25d825 #25d8251a"></div>
+                            <div class="color-5 color" data-color="#c70cc7 #c70cc71a"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="icon bar">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+        </div>
+    </div>
+    <section class="home">
+        <div class="content">
+            <h1 class="heading">
+                Customise your website with <span class="text-color">Beautiful Colours...
+                </span>
+            </h1>
+            <p class="text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto dolore eius harum dolorem aliquid reiciendis rerum ratione quae unde dolores? Lorem ipsum dolor sit amet.
+            </p>
+            <button class="btn">Explore Me <i class="fa-solid fa-angles-right right"></i></button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

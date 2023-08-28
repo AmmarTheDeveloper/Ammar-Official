@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <title>Search Bar</title>
+    <style>
+        *{
+            padding:0;
+            font-family:Poppins , sans-serif;
+        }
+       html, body{
+            margin:0;
+            background:whitesmoke;
+            min-height:100vh;
+            height:100%;
+        }
+        .container{
+            margin-bottom:54px;
+        }
+        .container .input-search{
+            width:400px;
+            box-sizing:border-box;
+            padding:0 20px 0 45px;
+            border-radius:5px;
+            outline:none;
+            border:1px solid grey;
+            background:#1d1f1d;
+            font-size:15px;
+            height:40px;
+            caret-color:white;
+            color:rgba(255,255,255,0.8);
+        }
+        .search-bar{
+            padding-top:20px;
+            width:fit-content;
+            margin:auto;
+            position:relative;
+        }
+        .container .search-icon{
+            position:absolute;
+            left:15px;
+            bottom:12px;
+            font-size:15px;
+            color:rgba(255,255,255,0.8);
+        }
+        .container .input-search::-webkit-input-placeholder{
+            color: rgba(255,255,255,0.8)!important;;
+        }
+        .container .images{
+            box-sizing:border-box;
+            padding-inline:50px;
+            margin-top:80px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:30px;
+            width:100%;
+        }
+        .container .box{
+            height:400px;
+            width:250px;
+            overflow:hidden;
+            border-radius:10px;
+            position:relative;
+            border:1px solid grey;
+        }
+        .container .images .img{
+            border-radius:10px;
+            height:100%;
+            width:100%;
+            transition:all 0.3s linear;
+        }
+        .container .images .img:hover{
+            transform:scale(1.05);
+        }
+        .container .images .title{
+            position:absolute;
+            bottom:-100%;
+            color:black;
+            left:0;
+            box-sizing:border-box;
+            padding-left:10px;
+            font-size:18px;
+            letter-spacing:0.5px;
+            background:rgba(255,255,255,0.7);
+            text-align:center;
+            width:100%;
+            transition:all 0.3s ease;
+        }
+        .container .images .box:hover .title{
+            bottom:0;
+        }
+        .error{
+            display:none;
+        }
+        .error.active{
+            display:block;
+        }
+        @media screen and  (max-width:500px){
+            .container .input-search{
+                width:100%;   
+            }
+            .container .search-bar{
+                width:90%;
+            }
+            .container .images{
+                padding-inline:30px;
+            }
+        }
+        @media screen and (max-width:350px){
+            .container .images{
+                padding-inline:20px;
+            }
+        }
+        @media screen and (max-width:325px){
+            .container .images{
+                padding-inline:0;
+            }
+        }
+        footer{
+            background:#1b1b1b;
+            margin-top:auto;
+            padding:0;
+            color:white;
+            padding:10px 50px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:-50px;
+        }
+        footer .ammar{
+            color:crimson;
+            text-decoration:none;
+            transition: all 0.3s linear;
+            text-underline-offset:3px;
+            text-decoration-thickness:2px !important;
+        }
+        footer .ammar:hover{
+            text-decoration:underline;
+        }
+        footer .icon{
+            font-size:25px;
+            margin-inline:20px;
+            text-decoration:none;
+            color:blue;
+            background:white;
+            border-radius:50%;
+            height:40px;
+            width:40px;
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            transition:all 0.3s ease-out;
+            flex-wrap:wrap;
+            border:2px solid grey;
+        }
+        footer .icon:first-child{
+            box-sizing:border-box;
+            padding-bottom:1px;
+        }
+        footer .icon:hover{
+            background:blue;
+            box-shadow:0 0 8px 7px blue;
+            color:white;
+            border:2px solid white;
+    }
+    @media screen and (max-width:970px){
+        footer{
+            flex-direction:column;
+            row-gap:5px;
+        }
+    }
+    @media screen and (max-width:700px){
+        footer .icon{
+            margin-inline:10px;
+        }
+    }
+    @media screen and (max-width:500px){
+        footer{
+            padding-inline:30px;
+        }
+    }
+    @media screen and (max-width:400px){
+        footer .icon{
+            margin-inline:5px;
+            margin-bottom:5px;
+        }
+        footer span:nth-child(2){
+            text-align:center;
+        }
+    }
+    </style>
+</head>
+<body class="active">
+    <div class="container">
+        <div class="search-bar">
+            <input type="search" Placeholder="Search a book" class="input-search" maxlength="25">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+        <div class="images">
+            <!-- first box -->
+            <div class="box" data-name="physics" data-name2="science">
+                <img src="images/physics.jpg" class="img">
+                <span class="title">physics</span>
+            </div>
+            <!-- second box -->
+            <div class="box" data-name="chemistry" data-name2="science">
+                <img src="images/chemistery.jpg" class="img">
+                <span class="title">chemistry</span>
+            </div>
+            <!-- third box -->
+            <div class="box" data-name="maths" data-name2="maths1">
+                <img src="images/maths1.jpg" class="img">
+                <span class="title">matahmetics part 1</span>
+            </div>
+            <!-- fourth box -->
+            <div class="box" data-name="maths" data-name2="maths2">
+                <img src="images/maths2.jpg" class="img">
+                <span class="title">mathametics part 2</span>
+            </div>
+            <!-- fifth box -->
+            <div class="box" data-name="biology" data-name2="science">
+                <img src="images/biology.jpg" class="img">
+                <span class="title">biology</span>
+            </div>
+            <!-- sixth box -->
+            <div class="box" data-name="hindi" data-name2="language">
+                <img src="images/hindi.jpg" class="img">
+                <span class="title">hindi</span>
+            </div>
+            <!-- seventh box -->
+            <div class="box" data-name="urdu" data-name2="language">
+                <img src="images/urdu.jpg" class="img">
+                <span class="title">urdu</span>
+            </div>
+            <!-- eighth box -->
+            <div class="box" data-name="english" data-name2="language">
+                <img src="images/english.jpg" class="img">
+                <span class="title">english</span>
+            </div>
+            <!-- ninth box -->
+            <div class="box" data-name="marathi" data-name2="language">
+                <img src="images/marathi.jpg" class="img">
+                <span class="title">marathi</span>
+            </div>
+            <!-- tenth box -->
+            <div class="box" data-name="information technology" data-name2="it">
+                <img src="images/it.jpg" class="img">
+                <span class="title">information technology</span>
+            </div>
+            <h4 class="error">
+                Your search - <span class="search-error"></span> did not match any documents
+            </h4>
+        </div>
+    </div>
+    <footer>
+        <span>Copyright &copy; 2022 || Developed and created by <a href="tel:919892564710" class="ammar">ammar</a> Developer</span>
+        <span><a href="https://wa.me/919892564710" class="fa-brands fa-whatsapp icon"></a>
+             <a href="tel:919892564710" class="fa-solid fa-phone icon"></a>
+              <a href="#" class="fa-brands fa-instagram icon"></a> 
+              <a href="#" class="fa-brands fa-telegram icon"></a></span>
+    </footer>
+    <script src="searchbar.js"></script>
+</html>

@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>Country  & city & state</title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+				body{
+				display:flex;
+				box-sizing:border-box;
+				padding-top:100px;
+				justify-content:start;
+				align-items:center;
+				align-content:center;
+				flex-direction:column;
+				row-gap:50px;
+				height:100vh;
+				width:100vw;
+				background:crimson;
+				flex-wrap:wrap;
+			}
+			.heading{
+				font-size:30px;
+				color:white;
+				text-shadow :5px 5px 5px black;
+			}
+			select{
+				height:45px;
+				width:150px;
+				padding-left:10px;
+				padding-right:10px;
+				border:5px outset rgba(0,0,0,0.4);
+				box-sizing:border-box;;
+				border-radius:5px;
+				outline:none;
+				cursor:pointer;
+				box-shadow:0 4px 5px  rgba(0,0,0.5);
+				margin:15px;
+				appearance:none;
+				-webkit-appearance:none;
+				-moz-appearance:none;
+			}
+			select:disabled{
+				cursor:not-allowed
+			}
+			option{
+				background:#f2f2f2;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="heading" align="center">SELECT YOUR COUNTRY</h1>
+		<div align="center">
+		<!-- country -->
+		<select class="country">
+			<option value="none" selected disabled>Country</option>
+			<option value="india">India</option>
+			<option value="usa">Usa</option>
+		</select>
+		<!-- city -->
+		<select class="city" disabled>
+			<option value="none" disabled selected>City</option>
+		</select>
+		<!--state-->
+		   <select class="state" disabled>
+			  <option value="none" disabled selected>State</option>
+		   </select>
+		</div>
+		   <!-- javascript code starts here -->
+		   <script>
+		   const country = document.querySelector('.country'),
+				 city = document.querySelector('.city'),
+				 state = document.querySelector('.state');
+			country.addEventListener('change' , ()=>{
+				let array;
+				let CityHTML = "";
+				// enabling city
+				if(country.value != "none"){
+					city.disabled = false;
+				}else{
+					city.disabled = true;
+				}
+				// inserting city
+				if(country.value == "india"){
+					array = ['up' , 'mumbai'];
+				}
+				else if(country.value == "usa"){
+					 array = ['newyork' , 'california'];
+				}
+				array.forEach(function(value){
+					CityHTML = CityHTML + `<option value=${value}> ${value} </option>`;
+				})
+				city.innerHTML =`<option selected disabled value="none">City</option>` + CityHTML;
+		})
+		city.addEventListener('change' , ()=>{
+			let array;
+			let StateHTML = "";
+			//enabling state
+			if(city.value == "none"){
+					state.disabled = true;
+				}else{
+					state.disabled = false;
+				}
+			//inserting state
+			if(city.value  == "up"){
+				array = ['balrampur' , 'sidharthnagar' , 'lucknow'];
+			}
+			else if(city.value == "mumbai"){
+				array = ['thane' , 'kurla' , 'sakinaka']
+			}
+			else if(city.value == "newyork"){
+				array = ['florida' , 'alaska'];
+			}
+			else{
+				array = ['hawaii' , 'Georgia']
+			}
+			array.forEach(function(value){
+				StateHTML = StateHTML + `<option value=${value}>${value}</option>`;
+			})
+				state.innerHTML = `<option selected disabled  value="none">State</option>` + StateHTML;
+		})
+		   </script>
+	</body>
+</html>

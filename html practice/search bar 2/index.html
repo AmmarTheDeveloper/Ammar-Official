@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <style>
+        *{
+            font-family:Poppins, sans-serif;
+        }
+        body{
+            margin:0;
+            padding:0;
+        }
+        .heading{
+            font-size:30px;
+            text-align:center;
+            margin-top:20px;
+        }
+        .search-container{
+            width:450px;
+            margin: 15px auto 0 auto;
+            height:40px;
+        }
+        .search{
+            border:2px solid black;
+            border-radius:5px;
+            outline:None;
+            width: 100%;
+            font-size:16px;
+            height:100%;
+            box-sizing:border-box;
+            padding-left:10px;
+        }
+        .images{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:40px;
+            flex-wrap:wrap;
+            width:100%;
+            margin-top:70px;
+            margin-bottom:50px;
+            box-sizing:border-box;
+            padding-inline:30px;
+        }
+        .images .box{
+            width:320px;
+            border:2px solid  black;
+            border-radius:5px;
+            height:300px;
+            box-sizing:border-box;
+            padding:10px 10px 0 10px;
+            text-align:center;
+            box-shadow: 0 2px 10px black;
+            animation : float 0.4s linear;
+        }
+        @keyframes float{
+            0%{
+                transform:scale(0.5);
+                opacity:0;
+                margin-top:10px;
+            }
+            100%{
+                transform:scale(1);
+                opacity:1;
+                margin-top:0;
+            }
+        }
+        .images .box .title{
+            font-size:18px;
+            font-weight:600;
+        }
+        .images .box .img{
+            border-radius:5px;
+            height:85%;
+            width:100%;
+        }
+        @media screen and (max-width:550px){
+            .heading{
+                font-size:25px;
+            }
+            .search-container{
+                width:90%;
+            }
+        }
+        @media screen and (max-width:400px){
+            .images{
+                padding-inline:20px;
+            }
+            .images .box{
+                width:100%;
+            }
+        }
+        @media screen and (max-width:350px){
+            .images{
+                padding-inline:10px;
+            }
+        }
+        .error{
+            font-size:30px;
+            font-weight:600;
+            display:none;
+        }
+        /* //////footer starts here////// */
+        footer{
+            background:#1b1b1b;
+            margin-top:auto;
+            padding:0;
+            color:white;
+            padding:10px 50px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:-50px;
+        }
+        footer .ammar{
+            color:crimson;
+            text-decoration:none;
+            transition: all 0.3s linear;
+            text-underline-offset:3px;
+            text-decoration-thickness:2px !important;
+        }
+        footer .ammar:hover{
+            text-decoration:underline;
+        }
+        footer .icon{
+            font-size:25px;
+            margin-inline:20px;
+            text-decoration:none;
+            color:blue;
+            background:white;
+            border-radius:50%;
+            height:40px;
+            width:40px;
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            transition:all 0.3s ease-out;
+            flex-wrap:wrap;
+            border:2px solid grey;
+        }
+        footer .icon:first-child{
+            box-sizing:border-box;
+            padding-bottom:1px;
+        }
+        footer .icon:hover{
+            background:blue;
+            box-shadow:0 0 8px 7px blue;
+            color:white;
+            border:2px solid white;
+    }
+    @media screen and (max-width:970px){
+        footer{
+            flex-direction:column;
+            row-gap:5px;
+        }
+    }
+    @media screen and (max-width:700px){
+        footer .icon{
+            margin-inline:10px;
+        }
+    }
+    @media screen and (max-width:500px){
+        footer{
+            padding-inline:30px;
+        }
+    }
+    @media screen and (max-width:400px){
+        footer .icon{
+            margin-inline:5px;
+            margin-bottom:5px;
+        }
+        footer span:nth-child(2){
+            text-align:center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1 class="heading">TYPE TO SEARCH</h1>
+       <div class="search-container">
+        <input type="search" class="search" placeholder="Search For  Images">
+       </div>
+    <div class="images">
+        <div class="box" data-name="bear" data-name2="animals">
+            <img src="images/bear.avif" alt="error" class="img">
+            <span class="title">Bear</span>
+        </div>
+        <div class="box" data-name="sparrow" data-name2="animals">
+            <img src="images/sparrow.avif" alt="error" class="img">
+            <span class="title">Sparrow</span>
+        </div>
+        <div class="box" data-name="parrot" data-name2="animals">
+            <img src="images/parrot.avif" alt="error" class="img">
+            <span class="title">Parrot</span>
+        </div>
+
+        <div class="box" data-name="butterfly" data-name2="animals">
+            <img src="images/butterfly.avif" alt="error" class="img">
+            <span class="title">Butterfly</span>
+        </div>
+        <div class="box" data-name="food" data-name2="foods">
+            <img src="images/food1.avif" alt="error" class="img">
+            <span class="title">Tasty food</span>
+        </div>
+        <div class="box" data-name="food" data-name2="foods">
+            <img src="images/food2.avif" alt="error" class="img">
+            <span class="title">Tasty food</span>
+        </div>
+        <div class="box" data-name="food" data-name2="foods">
+            <img src="images/food3.avif" alt="error" class="img">
+            <span class="title">Tasty food</span>
+        </div>
+        <div class="box" data-name="kila" data-name2="fort">
+            <img src="images/city.avif" alt="error" class="img">
+            <span class="title">Fort</span>
+        </div>
+        <div class="box" data-name="taj mahal" data-name2="tajmahal">
+            <img src="images/city2.avif" alt="error" class="img">
+            <span class="title">Taj mahal</span>
+        </div>
+        <div class="box" data-name="minar" data-name2="kutub minar">
+            <img src="images/city3.avif" alt="error" class="img">
+            <span class="title">Kutub minar</span>
+        </div>
+        <div class="box" data-name="gate of india" data-name2="gate of india">
+            <img src="images/city4.avif" alt="error" class="img">
+            <span class="title">Gate  Of India</span>
+        </div>
+        <div class="error">
+            <span>Your search - <span class="error2"></span> did not match any document</span>
+        </div>
+    </div>
+    <footer>
+        <span>Copyright &copy; 2022 || Developed and created by <a href="tel:919892564710" class="ammar">ammar</a> Developer</span>
+        <span><a href="https://wa.me/919892564710" class="fa-brands fa-whatsapp icon"></a>
+             <a href="tel:919892564710" class="fa-solid fa-phone icon"></a>
+              <a href="#" class="fa-brands fa-instagram icon"></a> 
+              <a href="#" class="fa-brands fa-telegram icon"></a></span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
